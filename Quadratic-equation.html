@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic-equation</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        .container{
+            /* padding: 1px 2px;
+            margin: 1px 2px; */
+            text-align: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            width: 100%;
+            height: 10vh;
+        }
+        nav h3{
+            font-size: 3rem;
+            color: white;
+            text-shadow: 1px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h3>Quadratic-equation</h3>
+        </nav>
+
+<section>
+    <p id="demo"></p>
+</section>
+    </div>
+    <script>
+            let root1,root2;
+            let a=prompt("enter the coefficients of a");
+            let b=prompt("enter the coefficients of b");
+            let c=prompt("enter the coefficients of c");
+            let d=((b*b)-(4*a*c));
+            if (d>0){
+                root1=(-b+Math.sqrt(d))/(2*a);
+                root2=(-b-Math.sqrt(d))/(2*a);
+                // console.log(`root1= ${root1} and root2= ${root2}`);
+                document.getElementById("demo").innerHTML=`root1= ${root1} and root2= ${root2}`;
+            }
+            else if (d==0){
+             root1=root2=(-b/(2*a));
+            //  console.log(`root1= ${root1} and root2= ${root2}`);
+             document.getElementById("demo").innerHTML=`root1= ${root1} and root2= ${root2}`;
+            }
+            else if (d<0){
+                let real=(-b/(2*a)).toFixed(2);
+                let img=Math.sqrt(-d)/(2*a);
+                let img1=img.toFixed(2);
+                //  console.log(`The root1= ${real}+${img1}i and root2= ${real}-${img1}i`);
+                document.getElementById("demo").innerHTML=`The root1= ${real}+${img1}i and root2= ${real}-${img1}i`;
+            }
+            
+    </script>
+</body>
+</html>
