@@ -1,0 +1,81 @@
+<DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example</title>
+    <style>
+        *{
+            padding: 0px auto;
+            margin: 0px auto;
+            box-sizing: border-box;
+        }
+        .container {
+            /* padding: 1px 2px;
+            margin: 1px 2px; */
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            width: 100%;
+            height: 10vh;
+        }
+
+        nav h3 {
+            font-size: 2rem;
+            color: white;
+            text-shadow: 1px 2px black;
+        }
+        /* section{
+            display: block;
+            margin: 2px 20px;
+        } */
+        #demo1{
+             margin-bottom: 10rem;
+             font-size: 2rem;
+        }
+        @media screen and (max-width:360px;) {
+            nav h3{
+                font-size: -2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h3>TEMPERATURE CONVERSION</h3>
+        </nav>
+
+        <section>
+            <p id="demo1"></p>
+        </section>
+    </div>
+    <script>
+        var choice = parseInt(prompt(
+                "Enter your choice for \n 1. Degree celsius to degree fahrenheit \n 2. Degree fahrenheit to degreecelsius" ));
+        switch(choice)
+        {
+            case 1:var f, cl;
+            cl = parseInt(prompt("Enter the value in celcius"));
+            f = ((1.8*cl)+32).toFixed(3);
+            document.getElementById("demo1").innerHTML = `${cl} degree celsius is equal to ${f} degree fahrenheit.`;
+            break
+            case 2:
+            f = parseInt(prompt("Enter the value in fahrenheit"));
+            cl = (f- 32)/1.8.toFixed(3);
+            document.getElementById("demo1").innerHTML = `${f} degree fahrenheit is equal to ${cl} degree celsius.`;
+            break
+            default:alert("Error choice");
+            break
+        }
+        </script>
+</body>
+
+</html>
