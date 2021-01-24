@@ -1,0 +1,76 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign of a Number</title>
+        <style>
+            * {
+                padding: 0px auto;
+                margin: 0px auto;
+                box-sizing: border-box;
+            }
+
+            .container {
+                /* padding: 1px 2px;
+            margin: 1px 2px; */
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: red;
+                width: 100%;
+                height: 10vh;
+            }
+
+            nav h3 {
+                font-size: 2rem;
+                color: white;
+                text-shadow: 1px 2px black;
+            }
+
+            section {
+                display: block;
+                margin: 5px 20px;
+            }
+
+            .para {
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width:360px; ) {
+                nav h3 {
+                    font-size: -2rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <h3>Sign of a Number</h3>
+            </nav>
+
+            <section>
+                <p id="demo1" class="para"></p>
+            </section>
+        </div>
+        <script>
+            var number = parseInt(prompt("enter your number to check positive or negative"));
+            if (number > 0) {
+                document.getElementById("demo1").innerHTML = `Entered number ${number} is positive`;
+            } else if (number < 0) {
+                document.getElementById("demo1").innerHTML = `Entered number ${number} is negative`;
+            } else if (number == 0) {
+                document.getElementById("demo1").innerHTML = `Entered number ${number} is zero`;
+            }
+        </script>
+    </body>
+
+    </html>
