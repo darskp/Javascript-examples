@@ -1,0 +1,98 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Largest NUmber</title>
+        <style>
+            * {
+                padding: 0px auto;
+                margin: 0px auto;
+                box-sizing: border-box;
+            }
+
+            .container {
+                /* padding: 1px 2px;
+            margin: 1px 2px; */
+                text-align: center;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: red;
+                width: 100%;
+                height: 10vh;
+            }
+
+            nav h3 {
+                font-size: 2rem;
+                color: white;
+                text-shadow: 1px 2px black;
+            }
+
+            section {
+                display: block;
+                margin: 5px 20px;
+            }
+
+            .para {
+                margin-bottom: 1rem;
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width:360px; ) {
+                nav h3 {
+                    font-size: -2rem;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <h3>Largest Number</h3>
+            </nav>
+
+            <section>
+                <p id="demo1" class="para"></p>
+            </section>
+        </div>
+        <script>
+            //    var num=parseInt(prompt("Enter your number to check the odd or even"));
+            //    if (num==0){
+            //         document.getElementById("demo1").innerHTML= `Entered number ${num} is neither odd nor even`;
+            //    }
+            //    else if(num%2==0){
+            //        document.getElementById("demo1").innerHTML= `Entered number ${num} is even`;
+            //    }
+            //    else
+            //    {
+            //         document.getElementById("demo1").innerHTML= `Entered number ${num} is odd`;
+            //    } 
+            //    var res=(num%2==0) ? "even":"odd";
+            //    document.getElementById("demo1").innerHTML= `Entered number ${num} is ${res}`;
+
+            var num1 = parseFloat(prompt("Enter the number 1"));
+            var num2 = parseFloat(prompt("Enter the number 2"));
+            var num3 = parseFloat(prompt("Enter the number 3"));
+            let largest=Math.max(num1,num2,num3);
+            // if ((num3 >= num1) && (num3 >= num2)) {
+            //     largest = num3;
+            //     // document.getElementById("demo1").innerHTML=`The ${num3} is greater than ${num2} and ${num1}`;
+            // } else if (num2 >= num1) {
+            //     largest = num2;
+            //     // document.getElementById("demo1").innerHTML=`The ${num2} is greater than ${num1} and ${num3}`;
+            // } else {
+            //     largest = num1;
+            // }
+            document.getElementById("demo1").innerHTML = `The largest number amoung ${num1},${num2} and ${num3} is ${largest}`;
+        //
+
+         </script>
+    </body>
+
+    </html>
